@@ -16,7 +16,7 @@ class Mod implements IPostDBLoadMod {
         item_container_ammo._props.Width = 1;
         item_container_ammo._props.Height = 1;
 
-        logger.warning('[item_container_ammo_w1h1]: item_container_ammo will place in 1x1 grid');
+        logger.warning('[OneCellAmmoCase]: AmmoCase will place in 1 cell');
     }
 }
 
