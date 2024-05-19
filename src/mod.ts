@@ -4,8 +4,8 @@ import {ILogger} from "@spt-aki/models/spt/utils/ILogger";
 import {DatabaseServer} from '@spt-aki/servers/DatabaseServer';
 import {IDatabaseTables} from '@spt-aki/models/spt/server/IDatabaseTables';
 
-const parentId:string = '5795f317245977243854e041';
-const idArray:Array<string> = [
+const type1ParentId:string = '5795f317245977243854e041';
+const type1IdArray:Array<string> = [
     '5c0a840b86f7742ffa4f2482', // THICC 物品箱
     '5c093db286f7740a1b2617e3', // 食品保温箱
     '5e2af55f86f7746d4159f07c', // 手榴弹箱
@@ -28,6 +28,13 @@ const idArray:Array<string> = [
     '5c127c4486f7745625356c13', // 弹匣箱
 ];
 
+const type2ParentId:string = '5671435f4bdc2d96058b4569';
+const type2IdArray:Array<string> = [
+    '5910922b86f7747d96753483', // 碳纤维保险箱，任务物品
+    '590dde5786f77405e71908b2', // 银行手提箱，任务物品
+    '567143bf4bdc2d1a0f8b4567', // 手枪收纳箱
+];
+
 class Mod implements IPostDBLoadMod {
     public postDBLoad(container:DependencyContainer): void {
         const logger = container.resolve<ILogger>('WinstonLogger');
@@ -35,10 +42,19 @@ class Mod implements IPostDBLoadMod {
         
         const tables:IDatabaseTables = databaseServer.getTables();
 
-        for (const iterator of idArray) {
+        for (const iterator of type1IdArray) {
             const template = tables.templates.items[iterator] || null;
             if(!template){continue;}
-            if(template._parent !== parentId){continue;}
+            if(template._parent !== type1ParentId){continue;}
+            template._props.Weight = 0;
+            template._props.Width = 1;
+            template._props.Height = 1;
+        }
+
+        for (const iterator of type2IdArray) {
+            const template = tables.templates.items[iterator] || null;
+            if(!template){continue;}
+            if(template._parent !== type2ParentId){continue;}
             template._props.Weight = 0;
             template._props.Width = 1;
             template._props.Height = 1;
