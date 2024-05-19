@@ -1,5 +1,5 @@
 # description
-a spt-aki mod that let AmmoCase place in 1 cell
+a spt-aki mod that let **Cases** place in 1 cell
 
 # install
 unarchive released zip file and put them in your spt-aki game folder like `C:\EscapeFromTarkov`, it is should be have the file `EscapeFromTarkov.exe` there.
