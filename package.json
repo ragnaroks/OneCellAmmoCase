@@ -1,5 +1,5 @@
 {
-    "name": "OneCellAmmoCase",
+    "name": "OneCellCases",
     "version": "3.8.20240519",
     "main": "src/mod.js",
     "license": "MIT",
