@@ -1,5 +1,5 @@
 # description
-a spt-aki mod that let **Cases** place in 1 cell, not includes **SecureCases**.
+a spt-aki mod that let cases place in 1 cell but not includes secure cases
 
 # install
 unarchive released zip file and put them in your spt-aki game folder like `C:\EscapeFromTarkov`, it is should be have the file `EscapeFromTarkov.exe` there.
@@ -13,3 +13,5 @@ not need
 require clear launcher's cache after upgrade or uninstall this mod.
 
 before uninstall this mod, make sure that your cases has cells for **origin** size.
+
+delete previous version before you upgrade this mod.
